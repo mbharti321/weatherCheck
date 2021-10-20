@@ -14,7 +14,8 @@ app.post("/", function (req, res) {
 
     // const queryCity = "Bengaluru";
     // reding city name entered by user
-    const queryCity = req.body.cityName;
+    var queryCity = req.body.cityName;
+    queryCity = queryCity.toUpperCase();
     const apiKey = "2d46b42460fc49e01757cecc18c83e78";
     const unit = "metric";
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + queryCity + "&units=" + unit + "&appid=" + apiKey + "";
