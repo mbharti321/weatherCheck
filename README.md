@@ -1,10 +1,11 @@
 # Weather Check
+
+### Hosted website link: [manish-weather-check.herokuapp.com](https://manish-weather-check.herokuapp.com/)
+Its a website which fetches current weather details of the city entered by the user and display in UI
 - Using node.js, OpenWeatherMap API
-- Using OpenWeatherMap API, fetched current weather
-details of the city entered by the user and display in UI
 
 
-## Screenshots
+# Screenshots
 "1. City Input"
 ![City Input](images/City%20NameInput.png)
 
