@@ -12,13 +12,13 @@ details of the city entered by the user and display in UI
 ![Weather Info](images/weatherinfoOld.png)
 
 "3. Weather Info2"
-![Weather Info](images/weatherinfo1.png)
+![Weather Info2](images/weatherinfo1.png)
 
 "4. Weather Info3"
-![Weather Info](images/weatherinfo2.png)
+![Weather Info3](images/weatherinfo2.png)
 
 "5. Weather Info4"
-![Weather Info](images/weatherinfo3.png)
+![Weather Info4](images/weatherinfo3.png)
 
 "6. Weather Info5"
-![Weather Info](images/weatherinfo4.png)
+![Weather Info5](images/weatherinfo4.png)
