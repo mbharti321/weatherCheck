@@ -40,10 +40,16 @@
 <body>
     <div class="center-box">
         <div class="container p-5 my-5 bg-dark text-white">
-            <h1>Your city weather info is <span class="highlight">just one click away!</span></h1>
+            <h1><span class="highlight">Great!</span> here is your city weather info:</h1>
             <form action="/" method="post">
-                <label for="cityInput" class="form-label"> City Name:</label>
-                <input type="text" class="form-control" name="cityName" id="cityInput"> <br>
+
+                <h1>City Name: <span> <%= myWeatherData.queryCity %> </span></h1>
+                <h1>The weather is currently: <span> <%= myWeatherData.description %> </span> </h1>
+                <h3>Current temperature is: <span> <%= myWeatherData.temp %> </span></h3>
+                <img src=<%= imageURL %> alt=<%= myWeatherData.description %>>
+
+                <!-- <label for="cityInput" class="form-label"> </label>
+                <input type="text" class="form-control" name="cityName" id="cityInput"> <br> -->
                 <button type="Submit" class="btn btn-primary">Get weather info</button>
             </form>
         </div>
