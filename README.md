@@ -9,10 +9,10 @@ details of the city entered by the user and display in UI
 ![City Input](images/City%20NameInput.png)
 
 "2. Weather Info"
-![Weather Info](images/weatherinfoOld.png)
+![Weather Info](images/weatherInfo.png)
 
-"3. Weather Info2"
-![Weather Info2](images/weatherInfo.png)
+"3. City Not Found"
+![City Not Found](images/cityNotFound.png)
 
 "4. Weather Info3"
 ![Weather Info3](images/weatherInfoTwo.png)
@@ -22,3 +22,6 @@ details of the city entered by the user and display in UI
 
 "6. Weather Info5"
 ![Weather Info5](images/weatherInfoFour.png)
+
+"7. Weather Info Old"
+![Weather Info](images/weatherinfoOld.png)

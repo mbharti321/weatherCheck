@@ -27,31 +27,49 @@ app.post("/", function (req, res) {
 
   // fetch data from opeanWeather API
   https.get(url, function (response) {
-    // console.log(response);
     response.on("data", function (data) {
-      // console.log(data);
       const weatherData = JSON.parse(data);
+      // res.send(weatherData)
+      // return
+      if (weatherData.cod === 200) {
+        //if city detils is found
+        const temp = weatherData?.main?.temp;
+        const description = weatherData?.weather[0]?.description;
+        const icon = weatherData?.weather[0]?.icon;
+        const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
 
-      const temp = weatherData.main.temp;
-      const description = weatherData.weather[0].description;
-      const icon = weatherData.weather[0].icon;
-      const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
+        // write data to webpage
+        // res.write("<h1> " + queryCity + "</h1>");
+        // res.write("<h1>The weather is currently " + description + ". </h1>");
+        // res.write("<h3>Current temperature is: " + temp + " degrees Celcius.</h3>");
+        // res.write("<img src=" + imageURL + " alt=" + description + ">");
+        // res.send();
 
-      // write data to webpage
-      // res.write("<h1> " + queryCity + "</h1>");
-      // res.write("<h1>The weather is currently " + description + ". </h1>");
-      // res.write("<h3>Current temperature is: " + temp + " degrees Celcius.</h3>");
-      // res.write("<img src=" + imageURL + " alt=" + description + ">");
-      // res.send();
-
-      const myWeatherData = {
-        queryCity: queryCity,
-        description: description,
-        temp: temp,
-        description: description,
-        imageURL: imageURL
+        const myWeatherData = {
+          queryCity: queryCity,
+          description: description,
+          temp: temp,
+          description: description,
+          imageURL: imageURL
+        }
+        // open response page
+        res.render("response", myWeatherData);
+      } else if (weatherData.cod === "404") {
+        // if entered city can't be found
+        data = {
+          "queryCity": queryCity,
+          "message": "we couldn't find your city!!"
+        }
+        res.render("not-found", data);
+      } else {
+        data = {
+          "queryCity": queryCity,
+          "message": "Somthing went wrong!!"
+        }
+        res.render("not-found", data);
       }
-      res.render("response", myWeatherData);
+
+
     });
   });
 });

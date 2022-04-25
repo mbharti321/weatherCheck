@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(267deg, #e4f365d1, transparent);
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            border-block-end: rgb(252, 203, 112) solid 1px;
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 5px;
+        }
+
+        img {
+            padding: 1px;
+            background: #60e367cc;
+            border-radius: 20%;
+        }
+
+        .center-box {
+            /* display: flex;
+            flex-wrap: wrap;
+            margin: 0px auto;
+            width: 60%; */
+            /* text-align: center; */
+        }
+
+        .container {
+            border-radius: 25px;
+        }
+
+        .highlight {
+            color: rgb(248, 57, 23);
+        }
+
+        .weatherData {
+            display: flex;
+            background: #37393c;
+            border-radius: 10px;
+            margin: 15px 0;
+            padding: 16px 0;
+        }
+
+        .weatherData div {
+            padding: 10px 30px;
+        }
+
+        .weatherData div h5 {
+            padding: 5px 0 0 0;
+        }
+
+        .underline {
+            border-bottom: 1px solid rgb(252, 203, 112);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center-box">
+        <div class="container p-5 my-5 bg-dark text-white">
+            <h1><span class="highlight">Sorry!</span> <br> <%= message %></h1>
+            <form action="/" method="GET">
+
+                <div class="weatherData">
+                    <div>
+                        <h5>City name: <span class="highlight"> <%= queryCity %> </span></h5>
+                    </div>
+                </div>
+                <button type="Submit" class="btn btn-primary btn-lg btn-block">Check another city</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
